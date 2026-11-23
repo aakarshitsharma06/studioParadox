@@ -200,9 +200,9 @@ export default function HeroSlider() {
                       <img
                         src="/logo-icon.png"
                         alt="Studio Paradox"
-                        className="h-20 sm:h-28 md:h-36 w-auto object-contain filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
+                        className="h-14 sm:h-24 md:h-36 w-auto object-contain filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
                       />
-                      <span className="font-display text-lg sm:text-2xl md:text-3xl tracking-[0.25em] text-white font-light mt-3 uppercase">
+                      <span className="font-display text-sm sm:text-2xl md:text-3xl tracking-[0.22em] text-white font-light mt-2 sm:mt-3 uppercase">
                         STUDIO PARADOX
                       </span>
                     </motion.div>

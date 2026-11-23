@@ -64,17 +64,17 @@ export default function Navbar() {
     <>
       {/* Top Navbar Header matching 23dcarchitects.com exactly */}
       <header className="fixed top-0 left-0 right-0 z-[100] pointer-events-none bg-background/60 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none border-b border-foreground/5 md:border-transparent transition-all duration-300">
-        <div className="flex items-center justify-between px-4 md:px-8 py-4 md:py-6 pb-5 md:pb-6">
+        <div className="flex items-center justify-between px-3 sm:px-4 md:px-8 py-3 sm:py-4 md:py-6 pb-3 sm:pb-5 md:pb-6">
           {/* Left: Live IST Time */}
           <span className="font-mono text-foreground/50 text-[10px] md:text-xs pointer-events-auto tracking-widest uppercase">
-            IST {istTime || '18:30'} GMT +5:30
+            IST <span className="text-foreground/75">{istTime || '18:30'}</span> <span className="hidden sm:inline">GMT +5:30</span>
           </span>
 
-          {/* Center: Brand Mark & Studio Paradox Title (NO ARCHITECTURE SUBTITLE) */}
+          {/* Center: Brand Mark (Icon on mobile, Icon + Title on sm+) */}
           <div className="absolute left-1/2 -translate-x-1/2 pointer-events-auto">
             <Link
               to="/"
-              className="flex items-center gap-2.5 group focus:outline-none"
+              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none"
               aria-label="Studio Paradox Home"
             >
               <div className="h-6 md:h-7 w-6 md:w-7 rounded overflow-hidden bg-black flex items-center justify-center border border-white/10 group-hover:border-white/30 transition-colors p-0.5">
@@ -84,7 +84,7 @@ export default function Navbar() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-display text-xs md:text-sm tracking-[0.24em] font-light text-white uppercase group-hover:text-accent transition-colors leading-none">
+              <span className="hidden sm:inline-block font-display text-xs md:text-sm tracking-[0.24em] font-light text-white uppercase group-hover:text-accent transition-colors leading-none">
                 STUDIO PARADOX
               </span>
             </Link>
@@ -94,13 +94,13 @@ export default function Navbar() {
           <div className="pointer-events-auto">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="group flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 hover:border-white/30 bg-white/[0.02] hover:bg-white/[0.06] transition-all duration-300 focus:outline-none"
+              className="group flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:border-white/30 bg-white/[0.02] hover:bg-white/[0.06] transition-all duration-300 focus:outline-none"
               aria-label="Toggle menu"
             >
-              <span className="font-mono text-xs tracking-widest text-foreground/80 group-hover:text-foreground">
+              <span className="font-mono text-[10px] sm:text-xs tracking-widest text-foreground/80 group-hover:text-foreground">
                 MENU
               </span>
-              <div className="flex flex-col gap-1 w-4">
+              <div className="flex flex-col gap-1 w-3 sm:w-4">
                 <span className="w-full h-px bg-foreground/80 group-hover:bg-foreground transition-all duration-300" />
                 <span className="w-2/3 h-px bg-foreground/80 group-hover:bg-foreground transition-all duration-300 group-hover:w-full" />
               </div>
