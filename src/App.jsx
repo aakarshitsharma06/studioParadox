@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import SmoothScroll from './components/SmoothScroll';
 import StartupAnimation from './components/StartupAnimation';
 import ScrollIndicator from './components/ScrollIndicator';
@@ -34,6 +35,7 @@ export default function App() {
     <SmoothScroll>
       <BrowserRouter>
         <ScrollToTop />
+        <Analytics />
 
         {/* Cinematic Startup Intro Animation */}
         {!startupComplete && (
